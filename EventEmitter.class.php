@@ -87,7 +87,7 @@ class EventEmitter{
             $args = func_get_args();
             array_shift($args);
             
-            foreach($this->events as $event){
+            foreach($this->events[$name] as $event){
                 call_user_func_array($event,$args);
             }
         }
